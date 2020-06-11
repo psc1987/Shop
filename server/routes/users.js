@@ -41,4 +41,10 @@ router.get('/session-check', (req, res) => {
     res.status(200).json(req.user)
 })
 
+router.put('/signout', (req, res) => {
+    req.logout();
+    res.status(201).json({})
+})
+
+
 module.exports = router;

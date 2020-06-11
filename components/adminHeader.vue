@@ -1,15 +1,28 @@
 <template>
-    <div class="">
+    <div class="nav" >
         <nuxt-link to="/admin">메인 페이지</nuxt-link>
         <nuxt-link to="/admin/users">유저 리스트</nuxt-link>
         <nuxt-link to="/admin/clothes">제품 리스트</nuxt-link>
         <nuxt-link to="/admin/purchase">구매 리스트</nuxt-link>
+        
     </div>
+    
 </template>
 
 <style scoped>
+
+nav{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 30px;
+
+}
+
 a{
-    padding: 10px;
+    padding : 10px;
+  
+    
 }
 </style>
 

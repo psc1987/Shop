@@ -4,6 +4,9 @@
             <a @click="changeCategory('하의')">하의</a>
             <a @click="changeCategory('상의')">상의</a>
         </div>
+
+
+        
         <ul>
             <li  v-for="cloth in clothes" :key="cloth['id']">
                 <nuxt-link :to='{path: "/cloth/" + cloth["id"]}'>
@@ -13,11 +16,38 @@
                 </nuxt-link>
             </li>
         </ul>
+      
         <div class="pagination">
             <a href="#" @click='getPage(p)' v-for="p in pagination" :key="p">{{p + 1}}</a>
         </div>
+
+        <div class = "footer">
+           <p> Shoppingmall program </p>
+
+        </div>
+
+
     </section>
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+.category{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.pagination{text-align:center; font-size: 15px; }
+.footer{clear: both; border-top: 1px solid #ccc; overflow :hidden}
+.footer p {font-size: 11px; text-align:center; margin:15px 0}
+
+
+
+
+</style>
+
+
 
 <script>
 import axios from 'axios'
